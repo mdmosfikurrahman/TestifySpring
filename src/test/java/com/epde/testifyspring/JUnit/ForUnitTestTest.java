@@ -172,7 +172,7 @@ public class ForUnitTestTest {
     }
 
     @ParameterizedTest
-    @EnumSource(Month.class) // passing all 12 months
+    @EnumSource(Month.class)
     void getValueForAMonth_IsAlwaysBetweenOneAndTwelve(Month month) {
         int monthNumber = month.getValue();
         assertTrue(monthNumber >= 1 && monthNumber <= 12);
