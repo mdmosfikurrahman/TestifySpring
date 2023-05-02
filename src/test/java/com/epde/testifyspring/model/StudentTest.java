@@ -23,9 +23,9 @@ public class StudentTest {
     @Test
     public void testStudentSetters() {
         // Arrange
-        Student student = new Student("John", "Doe");
-        String newFirstName = "Jane";
-        String newLastName = "Doe";
+        Student student = new Student("Md. Mosfikur", "Rahman");
+        String newFirstName = "Farzana";
+        String newLastName = "Yesmin";
 
         // Act
         student.setFirstName(newFirstName);

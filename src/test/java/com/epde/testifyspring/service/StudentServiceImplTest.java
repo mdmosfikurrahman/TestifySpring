@@ -26,8 +26,8 @@ public class StudentServiceImplTest {
     @Test
     void testFindAll() {
         List<Student> expected = new ArrayList<>();
-        expected.add(new Student("Alice", "Smith"));
-        expected.add(new Student("Bob", "Johnson"));
+        expected.add(new Student("Md. Mosfikur", "Rahman"));
+        expected.add(new Student("Farzana", "Yesmin"));
         when(repository.findAll()).thenReturn(expected);
         List<Student> actual = service.findAll();
         assertEquals(expected, actual);
@@ -36,7 +36,7 @@ public class StudentServiceImplTest {
     @Test
     void testFindById() {
         Long id = 1L;
-        Student expected = new Student("Alice", "Smith");
+        Student expected = new Student("Md. Mosfikur", "Rahman");
         when(repository.findById(id)).thenReturn(Optional.of(expected));
         Optional<Student> actual = service.findById(id);
         assertEquals(expected, actual.get());
@@ -44,7 +44,7 @@ public class StudentServiceImplTest {
 
     @Test
     void testSave() {
-        Student expected = new Student("Alice", "Smith");
+        Student expected = new Student("Md. Mosfikur", "Rahman");
         when(repository.save(expected)).thenReturn(expected);
         Student actual = service.save(expected);
         assertEquals(expected, actual);
